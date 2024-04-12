@@ -17,10 +17,6 @@
   };
 
   networking.hostName = "nixos"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   # Enable networking
   networking.networkmanager.enable = true;
@@ -49,7 +45,6 @@
   };
 
   services.xserver = {
-    # Enable the X11 windowing system.
     enable = true;
     xkb = {
       layout = "us";
@@ -90,8 +85,8 @@
         fishline = pkgs.fetchFromGitHub {
           owner = "0rax";
           repo = "fishline";
-          rev = "4b611b7"; # replace with specific commit or tag as needed
-          sha256 = "sha256-NYKzHbrRjZ6xYQRw8tN7dl2ySkey8vr9dBegv+C2JEg="; # replace with the correct hash
+          rev = "4b611b7";
+          sha256 = "sha256-NYKzHbrRjZ6xYQRw8tN7dl2ySkey8vr9dBegv+C2JEg=";
         };
       in
       ''
@@ -112,7 +107,6 @@
     isNormalUser = true;
     description = "Vlad";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [ firefox ];
   };
 
   # Allow unfree packages
