@@ -15,6 +15,7 @@
     gnome.gnome-calculator
     gnome.gnome-tweaks
     gnome.nautilus # file manager
+    helix
     kitty
     lazygit
     microsoft-edge-dev
