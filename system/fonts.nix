@@ -1,6 +1,10 @@
 { config, pkgs, ... }:
 
 {
+  environment.systemPackages = with pkgs; [
+    nerdfonts
+  ];
+
   fonts.packages = with pkgs; [
     noto-fonts
     noto-fonts-cjk

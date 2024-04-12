@@ -25,4 +25,10 @@
       end
     '';
   };
+
+
+  environment.systemPackages = with pkgs; [
+    powerline
+    zoxide # a smarter cd command
+  ];
 }
