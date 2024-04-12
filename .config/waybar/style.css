@@ -1,0 +1,149 @@
+/* COLORS */
+@define-color waybar-bg transparent;
+@define-color modules-bg transparent;
+
+@define-color main-bg rgba(220, 220, 220, 1);
+@define-color main-fg rgba(40, 40, 40, 1);
+
+@define-color hover-bg rgba(255, 255, 255, 1);
+@define-color hover-fg rgba(20, 20, 20, 1);
+
+@define-color active-bg rgba(240, 240, 240, 1);
+@define-color active-fg rgba(0, 0, 0, 1);
+
+@define-color outline rgba(80, 80, 80, 1);
+
+/* WINDOW */
+* {
+  border: none;
+  font-family: "Ubuntu Nerd Font";
+  font-size: 14px;
+}
+
+window {
+  font-weight: bold;
+}
+
+window#waybar {
+  background: @waybar-bg;
+}
+
+/* MODULE GROUPS */
+.modules-center,
+.modules-left,
+.modules-right {
+  background-color: @modules-bg;
+  margin-top: 10px;
+  min-height: 30px;
+}
+
+.modules-left {
+  margin-left: 5px;
+}
+
+.modules-right {
+  margin-right: 5px;
+}
+
+/* MODULES */
+#battery,
+#backlight,
+#clock,
+#cpu,
+#custom-media,
+#custom-menu,
+#custom-power,
+#custom-wireguard-manager,
+#idle_inhibitor,
+#language,
+#memory,
+#network,
+#pulseaudio,
+#temperature,
+#tray,
+#workspaces {
+  padding-left: 15px;
+  padding-right: 15px;
+
+  margin-left: 5px;
+  margin-right: 5px;
+
+  border-radius: 15px;
+
+  background-color: @main-bg;
+  color: @main-fg;
+}
+
+#workspaces {
+  padding: 0px;
+}
+
+#workspaces button {
+  border: 0px solid @outline;
+  border-radius: 15px;
+
+  padding: 0px 4px;
+
+  background-color: transparent;
+  color: @main-fg;
+
+  animation: ws_normal 20s ease-in-out 1;
+}
+
+#workspaces button.active {
+  padding: 0px 16px;
+
+  border: 2px solid @outline;
+
+  background: @active-bg;
+  color: @active-fg;
+
+  animation: ws_active 20s ease-in-out 1;
+  transition: all 0.4s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+}
+
+#workspaces button:hover {
+  background: @hover-bg;
+  color: @hover-fg;
+
+  animation: ws_hover 20s ease-in-out 1;
+  transition: all 0.2s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+}
+
+#custom-power {
+  min-width: 50px;
+  background-color: rgba(0, 170, 255, 1);
+  border-radius: 100px;
+}
+
+#language {
+  min-width: 30px;
+}
+
+#network {
+  min-width: 210px;
+}
+
+#window {
+  padding: 0px 10px;
+}
+
+/*-----Indicators----*/
+#idle_inhibitor.activated {
+  color: #2dcc36;
+}
+#pulseaudio.muted {
+  color: #cc3436;
+}
+#battery.charging {
+  color: #2dcc36;
+}
+#battery.warning:not(.charging) {
+  color: #e6e600;
+}
+#battery.critical:not(.charging) {
+  color: #cc3436;
+}
+#temperature.critical {
+  color: #cc3436;
+}

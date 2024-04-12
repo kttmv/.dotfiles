@@ -1,0 +1,117 @@
+{
+  "layer": "top", // Waybar at top layer
+  "position": "top", // Waybar at the bottom of your screen
+  "height": 0, // Waybar height
+  // "width": 1366, // Waybar width
+  // Choose the order of the modules
+  "modules-left": [
+    "battery",
+    "cpu",
+    "temperature",
+    "memory",
+    "network",
+    "hyprland/workspaces"
+  ],
+  "modules-center": ["clock"],
+  "modules-right": [
+    "tray",
+    "custom/wireguard-manager",
+    "backlight",
+    "pulseaudio",
+    "hyprland/language"
+  ],
+  "hyprland/language": {
+    "format": "{short}"
+  },
+  "tray": {
+    // "icon-size": 21,
+    "spacing": 10
+  },
+  "clock": {
+    "format": "{:%H:%M - %d.%m.%y}",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "mode": "year",
+      "mode-mon-col": 3,
+      "on-scroll": 1,
+      "on-click-right": "mode",
+      "format": {
+        "months": "<span color='#ffead3'><b>{}</b></span>",
+        "days": "<span color='#ecc6d9'><b>{}</b></span>",
+        "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+        "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+      },
+      "actions": {
+        "on-click-right": "mode",
+        "on-click-forward": "tz_up",
+        "on-click-backward": "tz_down",
+        "on-scroll-up": "shift_up",
+        "on-scroll-down": "shift_down"
+      }
+    }
+  },
+  "cpu": {
+    "format": "{usage}% "
+  },
+  "memory": {
+    "format": "{}% "
+  },
+  "battery": {
+    "bat": "BAT0",
+    "states": {
+      // "good": 95,
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{capacity}% {icon}",
+    // "format-good": "", // An empty format will hide the module
+    // "format-full": "",
+    "format-icons": ["", "", "", "", ""]
+  },
+  "network": {
+    // "interface": "wlp2s0", // (Optional) To force the use of this interface
+    "interval": 5,
+    "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+    "format-wifi": "{bandwidthDownBytes} ↓   {bandwidthUpBytes} ↑   ({signalStrength}%) ",
+    "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
+    "format-disconnected": "Disconnected ⚠"
+  },
+  "pulseaudio": {
+    //"scroll-step": 1,
+    "format": "{volume}% {icon}",
+    "format-bluetooth": "{volume}% {icon}",
+    "format-muted": "",
+    "format-icons": {
+      "headphones": "",
+      "handsfree": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["", ""]
+    },
+    "on-click": "pavucontrol"
+  },
+  "custom/wireguard-manager": {
+    "exec": "exec ~/.config/waybar/wireguard-manager/wireguard-manager.sh -s",
+    "format": "{icon}",
+    "format-icons": {
+      "connected": "<span color=\"#38b057\">VPN: ON</span>",
+      "disconnected": "<span>VPN: OFF</span>"
+    },
+    "interval": "once",
+    "on-click": "~/.config/waybar/wireguard-manager/wireguard-manager.sh -t && pkill -SIGRTMIN+1 waybar",
+    "return-type": "json",
+    "signal": 1
+  },
+  "custom/power": {
+    "on-click": "exec ~/.config/waybar/wofi-power.sh",
+    "format": ""
+  },
+  "backlight": {
+    "format": "{percent}% {icon}",
+    "format-icons": [""],
+    "scroll-step": 5
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "[*]": {
+    "coc.preferences.formatOnSave": true
+  },
+  "[typescriptreact]": {
+    "coc.preferences.formatOnSave": true
+  },
+  "[typescript]": {
+    "coc.preferences.formatOnSave": true
+  },
+  "[json]": {
+    "coc.preferences.formatOnSave": true
+  },
+  "coc.preferences.formatOnSaveFiletypes": ["*"],
+
+  "languageserver": {
+    "csharp-ls": {
+      "command": "csharp-ls",
+      "filetypes": ["cs"],
+      "rootPatterns": ["*.csproj", ".vim/", ".git/", ".hg/"]
+    },
+    "nix": {
+      "command": "nil",
+      "filetypes": ["nix"],
+      "rootPatterns": ["flake.nix"],
+      "settings": {
+        "nil": {
+          "formatting": { "command": ["nixpkgs-fmt"] }
+        }
+      }
+    }
+  }
+}
