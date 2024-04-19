@@ -19,6 +19,7 @@
     kitty
     lazygit
     microsoft-edge-dev
+    nh
     nodejs_21
     obsidian
     okular # pdf reader
@@ -32,5 +33,4 @@
     wget
     wineWowPackages.waylandFull
   ];
-
 }

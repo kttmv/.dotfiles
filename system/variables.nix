@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  environment.sessionVariables = rec {
-    FLAKE = "~/.dotfiles";
+  environment.variables = rec {
+    FLAKE = ".dotfiles";
   };
 }
