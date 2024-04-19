@@ -11,6 +11,7 @@
     dotnetCorePackages.dotnet_8.sdk
     dotnetPackages.Nuget
     gcc
+    gh
     git
     gnome.gnome-calculator
     gnome.gnome-tweaks
