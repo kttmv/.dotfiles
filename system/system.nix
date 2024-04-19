@@ -15,6 +15,7 @@
     ./networking.nix
     ./bootloader.nix
     ./nix.nix
+    ./variables.nix
   ];
 
   system.stateVersion = "23.11"; # Do not change
