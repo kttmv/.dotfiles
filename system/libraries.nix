@@ -17,7 +17,9 @@
     gdk-pixbuf
     glib
     gnome2.GConf
+    gtk2
     gtk3
+    gtk4
     libcap
     libdrm
     libgcc
