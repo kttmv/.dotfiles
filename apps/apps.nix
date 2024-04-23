@@ -6,7 +6,6 @@
   ];
 
   environment.systemPackages = with pkgs; [
-    anytype
     dotnetCorePackages.dotnet_8.runtime
     dotnetCorePackages.dotnet_8.sdk
     dotnetPackages.Nuget
