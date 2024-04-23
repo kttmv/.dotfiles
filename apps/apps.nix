@@ -17,15 +17,15 @@
     vscode # an evil code editor
     webcord # electron wrapper for web version of discrod
     zellij # a tmux killer
+    nh # nix cli helper 
+    firefox # not so evil browser
 
     dotnetCorePackages.dotnet_8.runtime
     dotnetCorePackages.dotnet_8.sdk
     dotnetPackages.Nuget
-    firefox
     gcc
     git
     gnome.gnome-tweaks
-    nh # "nh os/home switch" command
     nodejs_21
     python3
     rustup

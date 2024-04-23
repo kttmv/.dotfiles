@@ -5,7 +5,6 @@
     enable = true;
     vendor.functions.enable = true;
     vendor.completions.enable = true;
-    shellInit =
     interactiveShellInit =
       let
         fishline = pkgs.fetchFromGitHub {
@@ -28,6 +27,7 @@
     '';
   };
 
+  users.defaultUserShell = pkgs.fish;
 
   environment.systemPackages = with pkgs; [
     powerline

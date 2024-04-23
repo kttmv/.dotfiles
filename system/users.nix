@@ -2,8 +2,6 @@
 
 {
   users = {
-    defaultUserShell = pkgs.fish;
-
     users.vlad = {
       isNormalUser = true;
       description = "Vlad";
