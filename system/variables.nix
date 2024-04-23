@@ -2,6 +2,6 @@
 
 {
   environment.variables = rec {
-    FLAKE = ".dotfiles";
+    FLAKE = ".dotfiles"; # to make "nh" command simpler
   };
 }
