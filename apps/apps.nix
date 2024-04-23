@@ -6,6 +6,7 @@
   ];
 
   environment.systemPackages = with pkgs; [
+    zellij # a tmux killer
     dotnetCorePackages.dotnet_8.runtime
     dotnetCorePackages.dotnet_8.sdk
     dotnetPackages.Nuget

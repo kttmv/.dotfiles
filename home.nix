@@ -6,8 +6,6 @@
 
   home.packages = with pkgs; [ ];
 
-  programs.zellij.enable = true;
-
   home.file = {
     ".config" = {
       source = ./.config;
