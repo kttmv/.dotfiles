@@ -28,5 +28,8 @@
     gnome.nautilus # file manager
     kitty # default terminal emulator in hyprland
     wlogout # logout menu
+    wl-clip-persist # to keep Wayland clipboard after programs close
+    wl-clipboard # required by cliphist
+    cliphist # clipboard manager
   ];
 }
