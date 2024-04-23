@@ -14,7 +14,7 @@
         sddm.enable = true;
       };
       desktopManager = {
-        gnome.enable = true;
+        # gnome.enable = true;
         # deepin.enable = true;
       };
     };
