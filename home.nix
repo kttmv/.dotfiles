@@ -15,6 +15,11 @@
     };
   };
 
+  nixpkgs.config = {
+    allowUnfree = true;
+    allowUnfreePredicate = (_: true);
+  };
+
   programs.home-manager.enable = true;
 
   home.stateVersion = "23.11"; # Do not change
