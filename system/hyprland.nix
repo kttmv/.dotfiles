@@ -23,8 +23,10 @@
     brightnessctl # a program to change brightness
     networkmanagerapplet # tray app to connect to wifi
     hyprshot # screenshots for hyprland
+    hyprlock # screen locking utility
     gnome.gnome-calculator # calculator
     gnome.nautilus # file manager
     kitty # default terminal emulator in hyprland
+    wlogout # logout menu
   ];
 }
