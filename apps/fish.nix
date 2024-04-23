@@ -6,6 +6,7 @@
     vendor.functions.enable = true;
     vendor.completions.enable = true;
     shellInit =
+    interactiveShellInit =
       let
         fishline = pkgs.fetchFromGitHub {
           owner = "0rax";
@@ -17,6 +18,7 @@
       ''
         set FLINE_PATH ${fishline}
         source $FLINE_PATH/init.fish
+        eval (zellij setup --generate-auto-start fish | string collect)
         zoxide init fish | source
       '';
     promptInit = ''
