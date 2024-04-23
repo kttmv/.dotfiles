@@ -5,6 +5,7 @@
   // "width": 1366, // Waybar width
   // Choose the order of the modules
   "modules-left": [
+    "custom/fullscreen-indicator",
     "battery",
     "cpu",
     "temperature",
@@ -105,6 +106,10 @@
     "on-click": "~/.config/waybar/wireguard-manager/wireguard-manager.sh -t && pkill -SIGRTMIN+1 waybar",
     "return-type": "json",
     "signal": 1
+  },
+  "custom/fullscreen-indicator": {
+    "exec": "~/.config/waybar/display-fullscreen-status.sh",
+    "interval": 1
   },
   "custom/power": {
     "on-click": "wlogout",

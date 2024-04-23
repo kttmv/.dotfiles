@@ -54,6 +54,7 @@ window#waybar {
 #custom-menu,
 #custom-power,
 #custom-wireguard-manager,
+#custom-fullscreen-indicator,
 #idle_inhibitor,
 #language,
 #memory,
@@ -114,6 +115,10 @@ window#waybar {
   min-width: 50px;
   background-color: rgba(0, 170, 255, 1);
   border-radius: 100px;
+}
+
+#custom-fullscreen-indicator {
+  color: #38b057;
 }
 
 #language {
