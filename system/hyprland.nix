@@ -19,6 +19,7 @@
     libnotify # dunst depends on this
     swww # wallpaper daemon
     wofi # application launcher
+    rofi # application launcher, used for password prompt
     brightnessctl # a program to change brightness
     networkmanagerapplet # tray app to connect to wifi
     hyprshot # screenshots for hyprland
