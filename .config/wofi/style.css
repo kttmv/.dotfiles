@@ -1,53 +1,47 @@
+@define-color bg rgba(40, 42, 54, 0.5);
+@define-color outline #33ccff;
+
 window {
   margin: 0px;
-  border: 1px solid #bd93f9;
-  background-color: #282a36;
+  border: 2px solid @outline;
+  background-color: @bg;
   border-radius: 15px;
 }
 
 #input {
-  margin: 5px;
   padding: 10px;
-  border: none;
-  color: #f8f8f2;
-  background-color: #44475a;
-  border-radius: 15px;
+  border: 2px solid @outline;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-color: @bg;
+  color: white;
 }
 
 #inner-box {
-  margin: 5px;
-  border: none;
-  background-color: #282a36;
+  margin: 10px;
 }
 
 #outer-box {
-  margin: 5px;
-  border: none;
-  background-color: #282a36;
+  margin: 0px 0px 10px 0px;
 }
 
 #scroll {
-  margin: 0px;
-  border: none;
 }
 
 #text {
-  margin: 0px;
-  border: none;
-  color: #f8f8f2;
+  margin: 5px;
 }
 
 #entry.activatable #text {
-  color: #282a36;
 }
 
 #entry > * {
-  color: #f8f8f2;
+  color: rgba(255, 255, 255, 1);
   border-radius: 15px;
 }
 
 #entry:selected {
-  background-color: #44475a;
+  background-color: rgba(255, 255, 255, 0.2);
   border-radius: 15px;
   outline-style: none;
 }
@@ -57,5 +51,5 @@ window {
 }
 
 #img {
-    margin: 10px;
+  margin: 10px;
 }
