@@ -1,6 +1,20 @@
 { config, pkgs, ... }:
 
 {
+  gtk = {
+    enable = true;
+    theme = {
+      name = "Breeze-Dark";
+      package = pkgs.libsForQt5.breeze-gtk;
+    };
+  };
+
+  dconf.settings = {
+    "org/gnome/desktop/interface" = {
+      color-scheme = "prefer-dark";
+    };
+  };
+
   home.username = "vlad";
   home.homeDirectory = "/home/vlad";
 
