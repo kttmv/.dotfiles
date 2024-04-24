@@ -1,17 +1,18 @@
 {
   "layer": "top", // Waybar at top layer
   "position": "top", // Waybar at the bottom of your screen
+  "margin": "10px 10px 0px 10px",
   "height": 0, // Waybar height
   // "width": 1366, // Waybar width
   // Choose the order of the modules
   "modules-left": [
     "custom/fullscreen-indicator",
+    "hyprland/workspaces",
     "battery",
     "cpu",
     "temperature",
     "memory",
-    "network",
-    "hyprland/workspaces"
+    "network"
   ],
   "modules-center": ["clock"],
   "modules-right": [

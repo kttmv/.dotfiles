@@ -1,29 +1,48 @@
-@define-color fg rgba(220, 220, 220, 1);
-@define-color bg rgba(0, 0, 0, 0.2);
+/* COLORS */
+@define-color waybar-bg transparent;
+@define-color modules-bg transparent;
 
-@define-color outline rgba(89, 89, 89, 170);
-@define-color outline-active rgba(51, 204, 255, 238);
+@define-color main-bg rgba(220, 220, 220, 1);
+@define-color main-fg rgba(40, 40, 40, 1);
 
+@define-color hover-bg rgba(255, 255, 255, 1);
+@define-color hover-fg rgba(20, 20, 20, 1);
+
+@define-color active-bg rgba(240, 240, 240, 1);
+@define-color active-fg rgba(0, 0, 0, 1);
+
+@define-color outline rgba(80, 80, 80, 1);
+
+/* WINDOW */
 * {
   border: none;
-  font-family: "Ubuntu";
+  font-family: "Ubuntu Nerd Font";
   font-size: 14px;
 }
 
-window#waybar {
+window {
   font-weight: bold;
-  border: 2px solid @outline;
-  border-radius: 10px;
+}
 
-  color: @fg;
-  background-color: @bg;
+window#waybar {
+  background: @waybar-bg;
 }
 
 /* MODULE GROUPS */
 .modules-center,
 .modules-left,
 .modules-right {
-  min-height: 40px;
+  background-color: @modules-bg;
+  margin-top: 10px;
+  min-height: 30px;
+}
+
+.modules-left {
+  margin-left: 5px;
+}
+
+.modules-right {
+  margin-right: 5px;
 }
 
 /* MODULES */
@@ -44,7 +63,16 @@ window#waybar {
 #temperature,
 #tray,
 #workspaces {
-  padding: 0px 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  margin-left: 5px;
+  margin-right: 5px;
+
+  border-radius: 15px;
+
+  background-color: @main-bg;
+  color: @main-fg;
 }
 
 #workspaces {
@@ -53,11 +81,12 @@ window#waybar {
 
 #workspaces button {
   border: 0px solid @outline;
-  border-radius: 10px;
+  border-radius: 15px;
 
-  padding: 0px 8px;
+  padding: 0px 4px;
 
-  color: @fg;
+  background-color: transparent;
+  color: @main-fg;
 
   animation: ws_normal 20s ease-in-out 1;
 }
@@ -65,31 +94,27 @@ window#waybar {
 #workspaces button.active {
   padding: 0px 16px;
 
-  border: 2px solid @outline-active;
+  border: 2px solid @outline;
+
+  background: @active-bg;
+  color: @active-fg;
 
   animation: ws_active 20s ease-in-out 1;
   transition: all 0.4s cubic-bezier(0.55, -0.68, 0.48, 1.682);
 }
 
 #workspaces button:hover {
-  border: 2px solid @outline-active;
-
-  color: #101010;
+  background: @hover-bg;
+  color: @hover-fg;
 
   animation: ws_hover 20s ease-in-out 1;
   transition: all 0.2s cubic-bezier(0.55, -0.68, 0.48, 1.682);
 }
 
 #custom-power {
-  min-width: 80px;
-  margin: 2px;
-
-  background-color: rgba(0, 170, 255, 0.3);
-
-  border-top-left-radius: 100px;
-  border-bottom-left-radius: 100px;
-  border-top-right-radius: 50px;
-  border-bottom-right-radius: 50px;
+  min-width: 50px;
+  background-color: rgba(0, 170, 255, 1);
+  border-radius: 100px;
 }
 
 #custom-fullscreen-indicator {
@@ -101,10 +126,11 @@ window#waybar {
 }
 
 #network {
-  min-width: 230px;
+  min-width: 210px;
 }
 
 #window {
+  padding: 0px 10px;
 }
 
 /*-----Indicators----*/
