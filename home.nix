@@ -7,6 +7,7 @@
       name = "Breeze-Dark";
       package = pkgs.libsForQt5.breeze-gtk;
     };
+    font.name = "Ubuntu";
   };
 
   dconf.settings = {
