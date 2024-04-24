@@ -25,7 +25,6 @@
     dotnetPackages.Nuget
     gcc
     git
-    gnome.gnome-tweaks
     nodejs_21
     python3
     rustup
