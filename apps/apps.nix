@@ -20,12 +20,15 @@
     nh # nix cli helper 
     firefox # not so evil browser
 
-    dotnetCorePackages.dotnet_8.runtime
-    dotnetCorePackages.dotnet_8.sdk
+    (with dotnetCorePackages; combinePackages [
+      sdk_7_0
+      sdk_8_0
+    ])
+
     dotnetPackages.Nuget
     gcc
     git
-    nodejs_21
+    nodePackages_latest.nodejs
     python3
     rustup
     wget
