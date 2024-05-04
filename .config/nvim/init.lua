@@ -167,11 +167,6 @@ vim.cmd("colorscheme kanagawa")
 
 vim.g.mapleader = " "
 
--- Выход из терминала на ESC
-vim.api.nvim_set_keymap('t', '<Esc>', '<C-\\><C-n>', {noremap = true})
--- Открыть терминал
-vim.api.nvim_set_keymap('n', '<C-t>', '<C-w>v<cmd>ter<cr>i', {noremap = true})
-
 require("which-key").register({
     c = {
         name = "CoC commands",
