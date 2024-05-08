@@ -164,7 +164,8 @@ vim.cmd("colorscheme kanagawa")
 
 -------------------------------------------------------------------------------
 -- MAPPINGS
-
+vim.keymap.set("n", "<Space>", "<Nop>", { silent = true, remap = false })
+vim.keymap.set("v", "<Space>", "<Nop>", { silent = true, remap = false })
 vim.g.mapleader = " "
 
 require("which-key").register({
@@ -177,6 +178,7 @@ require("which-key").register({
         n = {"<Plug>(coc-rename)", "Rename Symbol"},
         d = {"<Plug>(coc-definition)", "Go to Definition"},
         a = {"<Plug>(coc-codeaction-cursor)", "Code actions"},
+        v = {"<Plug>(coc-codeaction-selected)", "Code actions on selection"},
     },
     h = {
         name = "Hop",
@@ -194,6 +196,21 @@ require("which-key").register({
         s = {"<cmd>Telescope session-lens search_session<cr>", "Search sessions"},
     },
 }, { prefix = "<leader>" })
+
+require("which-key").register({
+    c = {
+        name = "CoC commands",
+        h = {"<cmd>call CocAction('doHover')<cr>", "Show Documentation"},
+        f = {"<cmd>call CocActionAsync('format')<cr>", "Format Code"},
+        v = {"<Plug>(coc-codeaction-selected)", "Code actions on selection"},
+    },
+    h = {
+        name = "Hop",
+        w = {"<cmd>HopWord<cr>", "Hop Word"},
+        l = {"<cmd>HopLine<cr>", "Hop Line"},
+        c = {"<cmd>HopChar1<cr>", "Hop Char"},
+    }
+}, { prefix = "<leader>", mode="x" })
 
 -- Accept COC autocomplete action
 vim.api.nvim_set_keymap('i', '<Tab>', 'pumvisible() ? coc#_select_confirm() : "\\<Tab>"', {expr = true, noremap = true})
