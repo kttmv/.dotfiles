@@ -188,6 +188,19 @@
             options.desc = "Diagnostics";
           };
         };
+
+        settings = {
+          pickers = {
+            live_grep = {
+              file_ignore_patterns = [ "node_modules" ".git" ".venv" ];
+              additional_args = [ "--hidden" ];
+            };
+            find_files = {
+              file_ignore_patterns = [ "node_modules" ".git" ".venv" ];
+              hidden = true;
+            };
+          };
+        };
       };
 
       which-key = {
