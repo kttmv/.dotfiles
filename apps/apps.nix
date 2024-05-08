@@ -19,8 +19,10 @@
     zellij # a tmux killer
     nh # nix cli helper 
     firefox # not so evil browser
+    csharpier # an opinionated code formatter for C#
 
     (with dotnetCorePackages; combinePackages [
+      sdk_6_0
       sdk_7_0
       sdk_8_0
     ])
