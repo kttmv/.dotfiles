@@ -15,7 +15,8 @@
 
   environment.systemPackages = with pkgs; [
     waybar # status bar
-    dunst # notification daemon
+    #dunst # notification daemon
+    swaynotificationcenter
     libnotify # dunst depends on this
     swww # wallpaper daemon
     wofi # application launcher

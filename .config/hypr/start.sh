@@ -14,4 +14,4 @@ swww img ~/Wallpapers/8.jpg &
 
 waybar &
 
-dunst
+swaync
