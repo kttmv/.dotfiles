@@ -32,11 +32,13 @@
     options = {
       number = true;
       relativenumber = true;
+
       tabstop = 4;
       softtabstop = 4;
       shiftwidth = 4;
       expandtab = true;
-      smartindent = true;
+      cindent = true;
+
       scrolloff = 16;
       title = true;
       signcolumn = "yes";
@@ -45,7 +47,7 @@
     autoCmd = [
       {
         event = [ "BufWritePost" ];
-        pattern = [ "*.js" "*.ts" "*.jsx" "*.tsx" "*.json" ];
+        pattern = [ "*.js" "*.ts" "*.jsx" "*.tsx" "*.json" "*.jsonc" "*.css" "*.html" ];
         command = '':silent exec "!npx prettier % --write"'';
       }
       {
@@ -244,7 +246,11 @@
 
       lspkind.enable = true;
 
-      nvim-autopairs.enable = true;
+      nvim-autopairs = { enable = true; extraOptions = { map_cr = true; }; };
+
+      # autoclose = { enable = true; options = { autoIndent = true; pairSpaces = true; }; };
+
+
       ts-autotag.enable = true;
 
       treesitter.enable = true;
