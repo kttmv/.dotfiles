@@ -19,7 +19,7 @@
   home.username = "vlad";
   home.homeDirectory = "/home/vlad";
 
-  home.packages = with pkgs; [ ];
+  home.packages = with pkgs; [ lf ];
 
   programs.nixvim = {
     enable = true;
