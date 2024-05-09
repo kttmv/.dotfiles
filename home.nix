@@ -1,6 +1,8 @@
 { config, pkgs, nixvim, ... }:
 
 {
+  imports = [ ./home/wm/hyprland.nix ];
+
   gtk = {
     enable = true;
     theme = {
@@ -296,9 +298,7 @@
     ".config/helix" = {
       source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/.config/helix";
     };
-    ".config/hypr" = {
-      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/.config/hypr";
-    };
+    # ".config/hypr" = { source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/.config/hypr"; };
     ".config/kitty" = {
       source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/.config/kitty";
     };
