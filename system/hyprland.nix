@@ -14,7 +14,7 @@
   };
 
   environment.systemPackages = with pkgs; [
-    waybar # status bar
+    # waybar # status bar
     #dunst # notification daemon
     swaynotificationcenter
     libnotify # dunst depends on this

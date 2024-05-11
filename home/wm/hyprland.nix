@@ -12,8 +12,6 @@ let
     swww img ~/Wallpapers/7.jpg &
     swww img ~/Wallpapers/8.jpg &
 
-    waybar &
-
     swaync
   '';
 in

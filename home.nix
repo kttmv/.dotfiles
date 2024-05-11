@@ -1,7 +1,7 @@
-{ config, pkgs, nixvim, ... }:
+{ config, pkgs, ... }:
 
 {
-  imports = [ ./home/wm/hyprland.nix ];
+  imports = [ ./home/wm/hyprland.nix ./home/wm/waybar/waybar.nix ];
 
   gtk = {
     enable = true;
@@ -304,9 +304,6 @@
     };
     ".config/swaync" = {
       source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/.config/swaync";
-    };
-    ".config/waybar" = {
-      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/.config/waybar";
     };
     ".config/wlogout" = {
       source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/.config/wlogout";
