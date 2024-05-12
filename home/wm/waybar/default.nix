@@ -135,17 +135,13 @@ in
         battery = {
           bat = "BAT0";
           states = {
-            # "good": 95,
             warning = 30;
             critical = 15;
           };
           format = "{capacity}% {icon}";
-          # "format-good": "", # An empty format will hide the module
-          # "format-full": "",
           format-icons = [ "" "" "" "" "" ];
         };
         network = {
-          # "interface": "wlp2s0", # (Optional) To force the use of this interface
           interval = 5;
           tooltip-format-wifi = "{essid} ({signalStrength}%) ";
           format-wifi = "{bandwidthDownBytes} ↓   {bandwidthUpBytes} ↑   ({signalStrength}%) ";

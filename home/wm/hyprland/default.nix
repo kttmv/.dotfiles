@@ -12,6 +12,8 @@ let
     swww img ~/Wallpapers/7.jpg &
     swww img ~/Wallpapers/8.jpg &
 
+    waybar &
+
     swaync
   '';
 in
@@ -32,7 +34,7 @@ in
         kb_layout = "us, ru";
         kb_variant = "";
         kb_model = "";
-        kb_options = "grp:alt_shift_toggle, compose:ralt";
+        kb_options = "grp:alt_shift_toggle, compose:ralt, caps:escape";
         kb_rules = "";
 
         follow_mouse = 1;
