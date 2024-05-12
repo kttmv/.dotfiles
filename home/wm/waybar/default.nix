@@ -65,10 +65,9 @@ let
     '';
 in
 {
-
   programs.waybar = {
     enable = true;
-    systemd.enable = true;
+
     style = ./style.css;
 
     settings = {
@@ -126,11 +125,16 @@ in
             };
           };
         };
+        temperature = {
+          interval = 1;
+        };
         cpu = {
           format = "{usage}% ";
+          interval = 1;
         };
         memory = {
           format = "{}% ";
+          interval = 1;
         };
         battery = {
           bat = "BAT0";
