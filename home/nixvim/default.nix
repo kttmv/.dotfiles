@@ -22,6 +22,8 @@
       scrolloff = 16;
       title = true;
       signcolumn = "yes";
+
+      keymap = "russian-jcuken";
     };
 
     autoCmd = [
@@ -65,6 +67,12 @@
         action = ''"+p'';
         options.desc = "Paste from the system clipboard";
         mode = "v";
+      }
+      {
+        key = "<C-l>";
+        action = "<C-^>";
+        options.desc = "Switch keyboard layout";
+        mode = "i";
       }
       {
         key = "<C-v>";
