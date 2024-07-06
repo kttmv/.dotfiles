@@ -23,7 +23,19 @@
       title = true;
       signcolumn = "yes";
 
-      keymap = "russian-jcuken";
+      keymap = "russian-jcukenwin";
+
+      iminsert = 0;
+      imsearch = 0;
+
+      langmap = "ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz";
+    };
+
+    highlight = {
+      lCursor = {
+        fg = "Cyan";
+        bg = "Cyan";
+      };
     };
 
     autoCmd = [
