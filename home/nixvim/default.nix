@@ -28,14 +28,7 @@
       iminsert = 0;
       imsearch = 0;
 
-      langmap = "ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz";
-    };
-
-    highlight = {
-      lCursor = {
-        fg = "Cyan";
-        bg = "Cyan";
-      };
+      #langmap = "ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz";
     };
 
     autoCmd = [
