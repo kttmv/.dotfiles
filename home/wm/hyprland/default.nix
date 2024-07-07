@@ -22,7 +22,12 @@ in
   wayland.windowManager.hyprland = {
     enable = true;
     settings = {
-      monitor = ",highres,auto,1";
+      monitor = [
+        "eDP-1,highres,auto,1"
+        "HDMI-A-1,preferred,auto,1"
+        # mirror to hdmi
+        # "HDMI-A-1,preferred,auto,1,mirror,eDP-1"
+      ];
 
       xwayland = {
         force_zero_scaling = true;
