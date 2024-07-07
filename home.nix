@@ -24,7 +24,7 @@
   home.username = "vlad";
   home.homeDirectory = "/home/vlad";
 
-  home.packages = with pkgs; [ lf ];
+  home.packages = with pkgs; [ lf pavucontrol ];
 
   home.file = {
     ".config/fish" = {
