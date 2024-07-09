@@ -218,6 +218,21 @@
         "type": "indirect"
       }
     },
+    "nixpkgs-mongodb": {
+      "locked": {
+        "lastModified": 1720031269,
+        "narHash": "sha256-rwz8NJZV+387rnWpTYcXaRNvzUSnnF9aHONoJIYmiUQ=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "9f4128e00b0ae8ec65918efeba59db998750ead6",
+        "type": "github"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "rev": "9f4128e00b0ae8ec65918efeba59db998750ead6",
+        "type": "indirect"
+      }
+    },
     "nixvim": {
       "inputs": {
         "devshell": "devshell",
@@ -249,6 +264,7 @@
       "inputs": {
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs",
+        "nixpkgs-mongodb": "nixpkgs-mongodb",
         "nixvim": "nixvim"
       }
     },

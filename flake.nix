@@ -4,6 +4,8 @@
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
 
+    nixpkgs-mongodb.url = "nixpkgs/9f4128e00b0ae8ec65918efeba59db998750ead6";
+
     home-manager = {
       url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -15,16 +17,18 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, nixvim, ... }:
+  outputs = { nixpkgs, nixpkgs-mongodb, home-manager, nixvim, ... }:
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
+
     in
     {
       nixosConfigurations = {
         nixos = lib.nixosSystem {
           inherit system;
+
           modules = [ ./configuration.nix ];
         };
       };
@@ -32,7 +36,15 @@
       homeConfigurations = {
         vlad = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
-          modules = [ ./home.nix nixvim.homeManagerModules.nixvim ];
+
+          extraSpecialArgs = {
+            mongodb-pkgs = import nixpkgs-mongodb {
+              inherit system;
+              config.allowUnfree = true;
+            };
+          };
+
+          modules = [ ./home/default.nix nixvim.homeManagerModules.nixvim ];
         };
       };
     };
