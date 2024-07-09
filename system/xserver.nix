@@ -2,16 +2,16 @@
 
 {
   services = {
+    displayManager = {
+      # gdm.enable = true;
+      # lightdm.enable = true;
+      sddm.enable = true;
+    };
     xserver = {
       enable = true;
       xkb = {
         layout = "us";
         variant = "";
-      };
-      displayManager = {
-        # gdm.enable = true;
-        # lightdm.enable = true;
-        sddm.enable = true;
       };
       desktopManager = {
         # gnome.enable = true;

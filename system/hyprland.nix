@@ -25,7 +25,7 @@
     networkmanagerapplet # tray app to connect to wifi
     hyprshot # screenshots for hyprland
     hyprlock # screen locking utility
-    gnome.gnome-calculator # calculator
+    gnome-calculator # calculator
     kitty # default terminal emulator in hyprland
     wlogout # logout menu
     wl-clip-persist # to keep Wayland clipboard after programs close
