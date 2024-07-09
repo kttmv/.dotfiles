@@ -15,7 +15,6 @@ window#waybar {
   border: 2px solid @outline;
   border-radius: 10px;
 
-
   background-color: @bg;
 }
 
@@ -75,8 +74,6 @@ window#waybar {
 #workspaces button:hover {
   border: 2px solid @outline-active;
 
-  color: #101010;
-
   animation: ws_hover 20s ease-in-out 1;
   transition: all 0.2s cubic-bezier(0.55, -0.68, 0.48, 1.682);
 }
@@ -91,6 +88,10 @@ window#waybar {
   border-bottom-left-radius: 100px;
   border-top-right-radius: 50px;
   border-bottom-right-radius: 50px;
+}
+
+#custom-power:hover {
+  background-color: rgba(0, 100, 200, 0.3);
 }
 
 #custom-fullscreen-indicator {

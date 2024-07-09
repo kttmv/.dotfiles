@@ -1,30 +1,15 @@
-{ config, pkgs, ... }:
+{ config, ... }:
 
 {
   imports = [
-    ./home/wm/default.nix
-    ./home/nixvim/default.nix
+    ./packages.nix
+    ./gtk/default.nix
+    ./wm/default.nix
+    ./nixvim/default.nix
   ];
-
-  gtk = {
-    enable = true;
-    theme = {
-      name = "Breeze-Dark";
-      package = pkgs.libsForQt5.breeze-gtk;
-    };
-    font.name = "Ubuntu";
-  };
-
-  dconf.settings = {
-    "org/gnome/desktop/interface" = {
-      color-scheme = "prefer-dark";
-    };
-  };
 
   home.username = "vlad";
   home.homeDirectory = "/home/vlad";
-
-  home.packages = with pkgs; [ lf pavucontrol ];
 
   home.file = {
     ".config/fish" = {

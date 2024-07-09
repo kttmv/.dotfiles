@@ -31,6 +31,7 @@
     gcc
     git
     nodePackages_latest.nodejs
+    nodePackages_latest."@nestjs/cli"
     python3
     rustup
     wget
