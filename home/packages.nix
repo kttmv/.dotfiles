@@ -23,7 +23,7 @@ let
     firefox # not so evil browser
     microsoft-edge-dev # an evil browser
   ];
-  packagesListMongoDB = with mongodb-pkgs; [ mongodb ];
+  packagesListMongoDB = with mongodb-pkgs; [ mongodb mongosh ];
   packagesListDev = with pkgs; [
     # EDITORS
     helix # vim killer (?)
