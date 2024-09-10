@@ -1,5 +1,6 @@
 @define-color fg rgba(220, 220, 220, 1);
 @define-color bg rgba(0, 0, 0, 0.2);
+@define-color bg-hover rgba(100, 100, 100, 0.2);
 
 @define-color outline rgba(89, 89, 89, 170);
 @define-color outline-active rgba(51, 204, 255, 238);
@@ -47,6 +48,7 @@ window#waybar {
   padding: 0px 15px;
 }
 
+/* WORKSPACES */
 #workspaces {
   padding: 0px;
 }
@@ -78,6 +80,7 @@ window#waybar {
   transition: all 0.2s cubic-bezier(0.55, -0.68, 0.48, 1.682);
 }
 
+/* CUSTOM POWER */
 #custom-power {
   min-width: 80px;
   margin: 2px;
@@ -107,6 +110,11 @@ window#waybar {
 }
 
 #window {
+}
+
+/* HOVER */
+#custom-wireguard-manager:hover {
+  background-color: @bg-hover;
 }
 
 /*-----Indicators----*/

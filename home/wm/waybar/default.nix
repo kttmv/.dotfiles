@@ -37,7 +37,7 @@ let
       STATUS_DISCONNECTED_STR='{"text":"Disconnected","class":"disconnected","alt":"disconnected"}'
 
       function askpass() {
-        rofi -dmenu -password -no-fixed-num-lines -p "Sudo password : " -theme ${wireguardManagerRofiRasi}/wireguard-manager-rofi.rasi 
+        rofi -dmenu -password -no-fixed-num-lines -p "Sudo password : " -theme ${wireguardManagerRofiRasi}
       }
 
       function status_wireguard() {
@@ -47,8 +47,8 @@ let
 
       function toggle_wireguard() {
         status_wireguard && \
-           SUDO_ASKPASS=~/.config/waybar/wireguard-manager/wireguard-manager.sh sudo -A systemctl stop $SERVICE_NAME || \
-           SUDO_ASKPASS=~/.config/waybar/wireguard-manager/wireguard-manager.sh sudo -A systemctl start $SERVICE_NAME
+           SUDO_ASKPASS=$0 sudo -A systemctl stop $SERVICE_NAME || \
+           SUDO_ASKPASS=$0 sudo -A systemctl start $SERVICE_NAME
       }
 
       case $1 in
