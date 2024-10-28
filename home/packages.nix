@@ -1,4 +1,4 @@
-{ pkgs, mongodb-pkgs, ... }:
+{ pkgs, ... }:
 
 let
   packagesList = with pkgs; [
@@ -14,6 +14,7 @@ let
     obsidian # notes on steroids
 
     okular # pdf reader
+    peazip # winrar/7zip alternative
     onlyoffice-bin # office alternative
     pinta # paint alternative
 
@@ -23,11 +24,11 @@ let
     firefox # not so evil browser
     microsoft-edge-dev # an evil browser
   ];
-  packagesListMongoDB = with mongodb-pkgs; [ mongodb mongosh ];
   packagesListDev = with pkgs; [
     # EDITORS
     helix # vim killer (?)
     vscode # an evil code editor
+    zed-editor # vscode killer
 
     # GIT
     git
@@ -46,6 +47,7 @@ let
     gcc
     nodePackages_latest.nodejs
     nodePackages_latest."@nestjs/cli"
+    nodePackages_latest.prisma
     python3
     rustup
 
@@ -55,5 +57,5 @@ let
   ];
 in
 {
-  home.packages = packagesList ++ packagesListMongoDB ++ packagesListDev;
+  home.packages = packagesList ++ packagesListDev;
 }

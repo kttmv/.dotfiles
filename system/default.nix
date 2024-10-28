@@ -16,6 +16,7 @@
     ./bootloader.nix
     ./nix.nix
     ./variables.nix
+    #./virtualisation.nix
   ];
 
   system.stateVersion = "23.11"; # Do not change

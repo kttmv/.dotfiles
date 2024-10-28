@@ -208,6 +208,7 @@
           nil_ls.enable = true;
           tsserver.enable = true;
           csharp-ls.enable = true;
+          rust-analyzer.enable = true;
         };
       };
 

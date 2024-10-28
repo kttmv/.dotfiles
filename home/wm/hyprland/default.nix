@@ -48,7 +48,7 @@ in
           natural_scroll = "yes";
         };
 
-        sensitivity = 0;
+        sensitivity = -1;
       };
 
       general = {

@@ -29,6 +29,13 @@
         nixos = lib.nixosSystem {
           inherit system;
 
+          # specialArgs = {
+            # mongodb-pkgs = import nixpkgs-mongodb {
+              # inherit system;
+              # config.allowUnfree = true;
+            # };
+          # };
+
           modules = [ ./configuration.nix ];
         };
       };
@@ -36,13 +43,6 @@
       homeConfigurations = {
         vlad = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
-
-          extraSpecialArgs = {
-            mongodb-pkgs = import nixpkgs-mongodb {
-              inherit system;
-              config.allowUnfree = true;
-            };
-          };
 
           modules = [ ./home/default.nix nixvim.homeManagerModules.nixvim ];
         };

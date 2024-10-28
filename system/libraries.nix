@@ -15,7 +15,10 @@ in
 
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [
-    alsaLib
+    alsa-lib
+    alsa-oss
+    alsa-tools
+    alsa-utils
     at-spi2-atk
     atk
     at-spi2-core
@@ -42,6 +45,7 @@ in
     nss
     mesa
     pango
+    pkg-config
     systemd
     xorg.libICE
     xorg.libSM
