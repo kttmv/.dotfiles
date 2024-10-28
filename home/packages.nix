@@ -2,6 +2,7 @@
 
 let
   packagesList = with pkgs; [
+    kitty # terminal emulator
     warp-terminal # an intelligent? terminal
 
     # CLI
@@ -22,6 +23,9 @@ let
 
     webcord # electron wrapper for web version of discrod
 
+    gnome-calculator # calculator
+    cinnamon.nemo # file manager
+
     # BROWSERS
     firefox # not so evil browser
     microsoft-edge-dev # an evil browser
@@ -33,7 +37,6 @@ let
     zed-editor # vscode killer
 
     # GIT
-    git
     lazygit # nice terminal ui for git
     gh # github
 
@@ -55,7 +58,21 @@ let
     csharpier # an opinionated code formatter for C#
     nixpkgs-fmt # nix language formatter
   ];
+  packagesListWM = with pkgs; [
+    swaynotificationcenter
+    swww # wallpaper daemon
+    wofi # application launcher
+    rofi # application launcher, used for password prompt
+    brightnessctl # a program to change brightness
+    networkmanagerapplet # tray app to connect to wifi
+    hyprshot # screenshots for hyprland
+    hyprlock # screen locking utility
+    wlogout # logout menu
+    wl-clip-persist # to keep Wayland clipboard after programs close
+    wl-clipboard # required by cliphist
+    cliphist # clipboard manager
+  ];
 in
 {
-  home.packages = packagesList ++ packagesListDev;
+  home.packages = packagesList ++ packagesListDev ++ packagesListWM;
 }
