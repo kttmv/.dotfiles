@@ -4,7 +4,6 @@
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
 
-    nixpkgs-mongodb.url = "nixpkgs/9f4128e00b0ae8ec65918efeba59db998750ead6";
 
     home-manager = {
       url = "github:nix-community/home-manager/master";
@@ -17,7 +16,7 @@
     };
   };
 
-  outputs = { nixpkgs, nixpkgs-mongodb, home-manager, nixvim, ... }:
+  outputs = { nixpkgs, home-manager, nixvim, ... }:
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
@@ -28,13 +27,6 @@
       nixosConfigurations = {
         nixos = lib.nixosSystem {
           inherit system;
-
-          # specialArgs = {
-            # mongodb-pkgs = import nixpkgs-mongodb {
-              # inherit system;
-              # config.allowUnfree = true;
-            # };
-          # };
 
           modules = [ ./configuration.nix ];
         };
