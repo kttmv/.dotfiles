@@ -38,18 +38,16 @@ let
     gh # github
 
     # DOTNET
-    (with dotnetCorePackages; combinePackages [
-      sdk_6_0
-      sdk_7_0
-      sdk_8_0
-    ])
-    dotnetPackages.Nuget
+    #(with dotnetCorePackages; combinePackages [
+    #sdk_6_0
+    #sdk_7_0
+    #sdk_8_0
+    #])
+    #dotnetPackages.Nuget
 
     # LANGUAGES
     gcc
     nodePackages_latest.nodejs
-    nodePackages_latest."@nestjs/cli"
-    nodePackages_latest.prisma
     python3
     rustup
 
