@@ -18,6 +18,7 @@ let
   '';
 in
 {
+  home.packages = with pkgs; [ bibata-cursors ];
 
   wayland.windowManager.hyprland = {
     enable = true;
@@ -179,7 +180,7 @@ in
 
         # fullscreen
         "$mainMod, F, fullscreen, 1"
-        "$mainMod CONTROL, F, fakefullscreen"
+        "$mainMod CONTROL, F, fullscreenstate, -1, 2"
         "$mainMod SHIFT, F, fullscreen,"
 
         # open the wofi launcher

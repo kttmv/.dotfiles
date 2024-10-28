@@ -10,6 +10,11 @@
     };
 
     font.name = "Ubuntu";
+
+    cursorTheme = {
+      name = "Bibata-Modern-Ice";
+      package = pkgs.bibata-cursors;
+    };
   };
 
   dconf.settings = {

@@ -2,6 +2,8 @@
 
 let
   packagesList = with pkgs; [
+    warp-terminal # an intelligent? terminal
+
     # CLI
     lf # file browser
     zellij # tmux killer
