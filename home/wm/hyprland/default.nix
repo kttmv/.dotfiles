@@ -226,6 +226,7 @@ in
         # listen for keyboard changes
         "wl-paste --type text --watch cliphist store" #Stores only text data
         "wl-paste --type image --watch cliphist store" #Stores only image data
+        "hyprctl setcursor Bibata-Modern-Ice 24"
       ];
     };
   };
