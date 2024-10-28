@@ -10,7 +10,7 @@
         mapleader = " ";
       };
 
-      options = {
+      opts = {
         number = true;
         relativenumber = true;
 
@@ -208,9 +208,13 @@
           enable = true;
           servers = {
             nil_ls.enable = true;
-            tsserver.enable = true;
-            csharp-ls.enable = true;
-            rust-analyzer.enable = true;
+            ts_ls.enable = true;
+            csharp_ls.enable = true;
+            rust_analyzer = {
+              enable = true;
+              installCargo = true;
+              installRustc = true;
+            };
           };
         };
 
@@ -231,12 +235,12 @@
 
         auto-session = {
           enable = true;
-          sessionLens.loadOnSetup = true;
+          settings.session_lens.load_on_setup = true;
         };
 
         lspkind.enable = true;
 
-        nvim-autopairs = { enable = true; extraOptions = { map_cr = true; }; };
+        nvim-autopairs = { enable = true; settings = { map_cr = true; }; };
 
         # autoclose = { enable = true; options = { autoIndent = true; pairSpaces = true; }; };
 
@@ -244,6 +248,8 @@
         ts-autotag.enable = true;
 
         treesitter.enable = true;
+
+        web-devicons.enable = true;
 
         #cmp = {
         #enable = true;
