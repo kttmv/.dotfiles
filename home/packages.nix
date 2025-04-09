@@ -29,6 +29,9 @@ let
     # BROWSERS
     firefox # not so evil browser
     microsoft-edge-dev # an evil browser
+
+    # GAMING
+    mangohud
   ];
   packagesListDev = with pkgs; [
     # EDITORS

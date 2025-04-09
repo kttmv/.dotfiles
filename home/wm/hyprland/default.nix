@@ -49,7 +49,7 @@ in
           natural_scroll = "yes";
         };
 
-        sensitivity = -1;
+        sensitivity = 0;
       };
 
       general = {
